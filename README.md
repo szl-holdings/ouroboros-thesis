@@ -4,6 +4,7 @@
 
   [![Runtime tests](https://img.shields.io/badge/runtime%20tests-133%2F133-2da44e?style=flat-square)](https://github.com/szl-holdings/ouroboros)
   [![Contract](https://img.shields.io/badge/contract-v6.0.0-2b6cb0?style=flat-square)](./a11oy-ultimate-replit-payload.v6.json)
+    [![Paper v3](https://img.shields.io/badge/paper-v3.0.0-805ad5?style=flat-square)](./papers/ouroboros-thesis-v3.md)
   [![NYSTEC](https://img.shields.io/badge/NYSTEC%20audit-2026--04--30-805ad5?style=flat-square)](https://github.com/szl-holdings/ouroboros/blob/main/docs/audit/szl-government-readiness.md)
 
   This repository hosts the canonical text and operational contract for the **Ouroboros Thesis**, the architectural rationale that underpins the [SZL Holdings](https://github.com/szl-holdings) product portfolio.
@@ -31,11 +32,26 @@
   - **DoD Responsible AI Tenets**: 4 of 5 covered (Equitable in 30-day roadmap)
   - **GSAR 552.239-7001**: 5 of 10 covered, 5 documented gaps (all documentation, no architectural rework needed)
 
-  ## Citation
+  ## Papers
 
-  The thesis draws on, and explicitly generalizes, the loop-language work in the literature (notably the *Ouro LoopLM* line of inquiry, arXiv:2510.25741) to the **system layer** — control planes, agent fabrics, data-sync engines — rather than the model layer. See §2 of the thesis for the full lineage.
+    | Version | File | Status |
+    |---|---|---|
+    | **v3** (current) | [`papers/ouroboros-thesis-v3.md`](./papers/ouroboros-thesis-v3.md) | Auditable governance surface; closes the v2 audit gaps (adaptive depth implemented, integration map, formal §3.2 spec, real references) |
+    | v2 | [`ouroboros-thesis-v2.md`](./ouroboros-thesis-v2.md) | Architectural rationale, retained for historical record |
 
-  ---
+    ## v3 — what changed from v2
 
-  © 2026 SZL Holdings. The thesis text is published for reference; reuse requires written permission.
-  
+    The v2 audit identified three gaps; v3 closes them:
+
+    1. **Adaptive depth was declared, not implemented.** v3 ships the formal **EntropyDepthAllocator** (§3.2): a pure-function controller over Δ-magnitude (normalized Hamming witness) and validator entropy with explicit early-exit and budget-extension verdicts. Reference implementation: `packages/codex-kernel/src/depth-allocator.ts` in the platform monorepo, behind opt-in flag `loop_policy.adaptive_depth.enabled`. Determinism preserved: with the flag off, runs are bit-identical to pre-v3.
+    2. **Cross-runtime wiring was sketched, not proven.** v3 §5 maps the primitive to three concrete runtimes (A11oy / Sentra / Terra) with file-level pointers.
+    3. **Governance was underplayed.** v3 leads the abstract with "auditable governance surface", not "capability gains," and §6 maps line-by-line to EU AI Act Art. 12 and NIST AI RMF 1.0 MEASURE/MANAGE.
+
+    ## Citation
+
+    The thesis draws on, and explicitly generalizes, the loop-language work in the literature (notably the *Ouro LoopLM* line of inquiry, arXiv:2510.25741, alongside Universal Transformers, PonderNet, ACT) to the **system layer** — control planes, agent fabrics, data-sync engines — rather than the model layer. See §2 of the thesis for the full lineage.
+
+    ---
+
+    © 2026 SZL Holdings. The thesis text is published for reference; reuse requires written permission.
+    
