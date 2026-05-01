@@ -1,0 +1,47 @@
+{
+  "name": "a11oy",
+  "description": "Anonymized A11oy plan-replanning fixture for the §5.5 frontier sweep. Each instance is one workflow with up to 8 plan iterations and a recorded ground-truth converged plan.",
+  "runtimeVersion": "@szl-holdings/ouroboros@v6.1.0",
+  "scorer": "plan-edit-distance",
+  "instances": [
+    {
+      "id": "a11oy_001_cfo_brief",
+      "initialState": { "plan": ["draft"], "iteration": 0 },
+      "transitions": [
+        { "output": { "plan": ["draft", "research"] }, "nextState": { "plan": ["draft", "research"], "iteration": 1 } },
+        { "output": { "plan": ["draft", "research", "validate", "summary"] }, "nextState": { "plan": ["draft", "research", "validate", "summary"], "iteration": 2 } },
+        { "output": { "plan": ["draft", "research", "validate", "summary"] }, "nextState": { "plan": ["draft", "research", "validate", "summary"], "iteration": 3 } }
+      ],
+      "groundTruth": { "plan": ["draft", "research", "validate", "summary"] },
+      "probeDeltas": [0.55, 0.30, 0.05],
+      "stakes": 1
+    },
+    {
+      "id": "a11oy_002_compliance_check",
+      "initialState": { "plan": ["intake"], "iteration": 0 },
+      "transitions": [
+        { "output": { "plan": ["intake", "policy_lookup"] }, "nextState": { "plan": ["intake", "policy_lookup"], "iteration": 1 } },
+        { "output": { "plan": ["intake", "policy_lookup", "redact"] }, "nextState": { "plan": ["intake", "policy_lookup", "redact"], "iteration": 2 } },
+        { "output": { "plan": ["intake", "policy_lookup", "redact", "approval", "notify"] }, "nextState": { "plan": ["intake", "policy_lookup", "redact", "approval", "notify"], "iteration": 3 } },
+        { "output": { "plan": ["intake", "policy_lookup", "redact", "approval", "notify"] }, "nextState": { "plan": ["intake", "policy_lookup", "redact", "approval", "notify"], "iteration": 4 } }
+      ],
+      "groundTruth": { "plan": ["intake", "policy_lookup", "redact", "approval", "notify"] },
+      "probeDeltas": [0.40, 0.45, 0.15],
+      "stakes": 2
+    },
+    {
+      "id": "a11oy_003_oscillator",
+      "initialState": { "plan": ["A"], "iteration": 0 },
+      "transitions": [
+        { "output": { "plan": ["A", "B"] }, "nextState": { "plan": ["A", "B"], "iteration": 1 } },
+        { "output": { "plan": ["A", "C"] }, "nextState": { "plan": ["A", "C"], "iteration": 2 } },
+        { "output": { "plan": ["A", "B"] }, "nextState": { "plan": ["A", "B"], "iteration": 3 } },
+        { "output": { "plan": ["A", "B", "D"] }, "nextState": { "plan": ["A", "B", "D"], "iteration": 4 } },
+        { "output": { "plan": ["A", "B", "D"] }, "nextState": { "plan": ["A", "B", "D"], "iteration": 5 } }
+      ],
+      "groundTruth": { "plan": ["A", "B", "D"] },
+      "probeDeltas": [0.35, 0.42, 0.38],
+      "stakes": 1
+    }
+  ]
+}

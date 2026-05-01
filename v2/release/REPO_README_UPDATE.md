@@ -1,3 +1,5 @@
+# Updated Root README — copy this whole file to `README.md` in the repo root
+
 # The Ouroboros Thesis
 
 > Bounded loops with measurable convergence as a first-class system primitive.

@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "title": "The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI",
+    "subtitle": "An Empirical Companion to the Ouroboros Thesis",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "publication_date": "2026-04-30",
+    "language": "eng",
+    "version": "2.0.0",
+    "creators": [
+      {
+        "name": "Lutar, Stephen P.",
+        "affiliation": "SZL Holdings",
+        "orcid": ""
+      }
+    ],
+    "description": "<p>This is the empirical companion to <em>The Ouroboros Thesis</em> (Lutar, 2026; Zenodo: 10.5281/zenodo.19867281). The v1 paper was a position and systems-design preprint and made no empirical claims. v2 reports a shipped reference implementation of the four v1 primitives as a TypeScript runtime (<code>@szl-holdings/ouroboros</code>, 142/142 tests passing, deterministic replay, opt-in adaptive depth with bit-identical invariant), three production case studies on the same kernel (A11oy, Sentra, Amaru) with shared trace persistence via <code>aef-evidence-ledger</code>, and closure of the five-item experimental agenda from v1 \u00a79, including a new loop-budget Pareto frontier and a pre-registered small-N crossover study on whether convergence traces change human audit behavior.</p><p>The paper includes a falsification ledger (\u00a73.7) listing nine load-bearing claims paired with the specific observations that would refute them, and a reproducibility manifest (\u00a710) pinning runtime, thesis, and platform commits along with file blob SHAs. Cross-system distillation is deliberately held as a hypothesis, not promoted to a result.</p><p>Central claim defended: <strong>when convergence is measurable, the trace is not a log but a deliverable</strong> \u2014 one that downstream audit, policy compilation, and regulated procurement can consume as evidence rather than as documentation.</p><p>Mapped to NIST AI RMF MEASURE/MANAGE, EU AI Act Article 12 record-keeping, and the 2026-04-30 NYSTEC government-readiness audit (A11oy 72/100, Sentra 68/100, Amaru 65/100).</p>",
+    "keywords": [
+      "adaptive computation",
+      "recursive systems",
+      "AI governance",
+      "agent runtimes",
+      "decision receipts",
+      "auditable AI",
+      "loop budget",
+      "convergence traces",
+      "NIST AI RMF",
+      "EU AI Act",
+      "reproducibility"
+    ],
+    "subjects": [
+      {"term": "Computer Science - Software Engineering", "identifier": "cs.SE", "scheme": "arxiv"},
+      {"term": "Computer Science - Artificial Intelligence", "identifier": "cs.AI", "scheme": "arxiv"}
+    ],
+    "license": "cc-by-4.0",
+    "access_right": "open",
+    "communities": [],
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.19867281",
+        "relation": "isNewVersionOf",
+        "resource_type": "publication-preprint",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "https://github.com/szl-holdings/ouroboros-thesis",
+        "relation": "isSupplementTo",
+        "resource_type": "software"
+      },
+      {
+        "identifier": "https://github.com/szl-holdings/ouroboros",
+        "relation": "isSupplementTo",
+        "resource_type": "software"
+      }
+    ],
+    "references": [
+      "Dehghani et al., 2018. Universal Transformers. ICLR 2019.",
+      "Banino et al., 2021. PonderNet: Learning to Ponder. ICML.",
+      "Graves, 2016. Adaptive Computation Time for Recurrent Neural Networks. arXiv:1603.08983.",
+      "Lutar, S.P., 2026. The Ouroboros Thesis: Looped Computation as a System Primitive for AI Systems. Zenodo. https://doi.org/10.5281/zenodo.19867281",
+      "NIST AI Risk Management Framework 1.0 (2023).",
+      "EU AI Act, Regulation (EU) 2024/1689, Article 12 (record-keeping)."
+    ],
+    "notes": "Companion paper to Zenodo 19867281 (v1 position paper). v2 closes the v1 \u00a79 experimental agenda with shipped, version-pinned implementations and pre-registered analyses. Falsification ledger (\u00a73.7) and reproducibility manifest (\u00a710) included. Replication harness is MIT-licensed; the runtime is proprietary."
+  }
+}

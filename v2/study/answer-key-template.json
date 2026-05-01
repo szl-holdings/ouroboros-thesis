@@ -1,0 +1,61 @@
+{
+  "_comment": "Ground-truth answer key for the §5.4 trace-audit study. NEVER shown to reviewers. Used by analysis.ipynb to score Q1 + Q2 free-text responses. Each entry maps a stimulus_id to the canonical correct answer for Q1 and a list of acceptable keyword hits for Q2 (the error-class identification).",
+  "stimuli": {
+    "a11oy_e1": {
+      "correct_q1": "No",
+      "error_class": "wrong-route",
+      "expected_keywords": ["proof route", "PRF_SECURITY_ACTIONS", "PRF_SYSTEM_CLAIMS", "wrong route", "missing artifact"],
+      "rationale": "Trace shows missing escalation_check artifact in proof route — security action was misrouted as system claim."
+    },
+    "a11oy_e2": {
+      "correct_q1": "No",
+      "error_class": "premature-convergence",
+      "expected_keywords": ["safe exit", "consistency below", "premature", "stopped early", "safeExitConsistencyScore"],
+      "rationale": "Loop exited converged but safeExitConsistencyScore was 0.62 (below 0.95 default)."
+    },
+    "a11oy_e3": {
+      "correct_q1": "No",
+      "error_class": "stale-tool-result",
+      "expected_keywords": ["stale", "cached", "invalidated", "step 1 invalidates step 2", "tool result"],
+      "rationale": "Step 1 invalidated a cache key used in step 2 — visible in step durations and output mismatch."
+    },
+    "sentra_e1": {
+      "correct_q1": "No",
+      "error_class": "risk-tier-bypassed",
+      "expected_keywords": ["R3", "approval", "escalation", "bypassed", "fall-through", "await_approval"],
+      "rationale": "Risk tier R3_high should have triggered await_approval gate; trace shows fall-through to continue."
+    },
+    "sentra_e2": {
+      "correct_q1": "No",
+      "error_class": "wrong-stakes",
+      "expected_keywords": ["stakes", "multiplier", "incident", "misclassified", "R1 only"],
+      "rationale": "Stakes set to 4 (incident) but only R1 policies fired — likely misclassification."
+    },
+    "sentra_e3": {
+      "correct_q1": "No",
+      "error_class": "hidden-non-convergence",
+      "expected_keywords": ["budget", "exhausted", "oscillating", "did not converge", "presented as authoritative"],
+      "rationale": "Loop exited budgetExhausted with oscillating delta but final state presented as authoritative."
+    },
+    "amaru_e1": {
+      "correct_q1": "No",
+      "error_class": "redaction-leak",
+      "expected_keywords": ["redaction", "redacted", "leak", "PII", "unredacted in output"],
+      "rationale": "redactedFields lists email but rendered output shows unredacted email."
+    },
+    "amaru_e2": {
+      "correct_q1": "No",
+      "error_class": "trace-output-divergence",
+      "expected_keywords": ["divergence", "different action", "mismatch", "last step output", "serialization"],
+      "rationale": "Final output describes action X but last trace step output is action Y."
+    },
+    "a11oy_c1": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — converged at step 3, all artifacts present." },
+    "a11oy_c2": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — adaptive depth correctly extended budget on oscillating trajectory." },
+    "a11oy_c3": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — exit:consistent at step 4 with score 0.97." },
+    "sentra_c1": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — R2 risk continued without approval gate as expected." },
+    "sentra_c2": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — R3 correctly triggered await_approval, approved by named reviewer." },
+    "amaru_c1": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — diff converged to 0 at step 4." },
+    "amaru_c2": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — non-convergent entity correctly flagged for manual reconciliation." },
+    "amaru_c3": { "correct_q1": "Yes", "error_class": null, "expected_keywords": [], "rationale": "Clean — converged, all redactions applied correctly." }
+  }
+}
