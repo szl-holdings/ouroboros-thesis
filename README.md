@@ -10,6 +10,7 @@
 [![Zenodo v2 (latest)](https://zenodo.org/badge/DOI/10.5281/zenodo.19934129.svg)](https://doi.org/10.5281/zenodo.19934129)
 [![Zenodo v1](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.19867281-1f78b4?style=flat-square)](https://doi.org/10.5281/zenodo.19867281)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-1f78b4?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0001--0110--4173-A6CE39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0001-0110-4173)
 [![NYSTEC](https://img.shields.io/badge/NYSTEC%20audit-2026--04--30-805ad5?style=flat-square)](https://github.com/szl-holdings/ouroboros/blob/main/docs/audit/szl-government-readiness.md)
 
 This repository hosts the canonical text and operational contract for the **Ouroboros Thesis**, the architectural rationale that underpins the [SZL Holdings](https://github.com/szl-holdings) product portfolio.
@@ -51,15 +52,16 @@ If you use this work, please cite the v2 empirical companion:
 
 ```bibtex
 @article{lutar2026ouroboros_v2,
-  author  = {Lutar, Stephen P.},
-  title   = {The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI},
-  journal = {Zenodo},
-  year    = {2026},
-  month   = apr,
-  doi     = {10.5281/zenodo.19934129},
-  url     = {https://doi.org/10.5281/zenodo.19934129},
-  version = {2.0.0},
-  license = {CC-BY-4.0}
+  author       = {Lutar, Stephen P.},
+  author_orcid = {0009-0001-0110-4173},
+  title        = {The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI},
+  journal      = {Zenodo},
+  year         = {2026},
+  month        = apr,
+  doi          = {10.5281/zenodo.19934129},
+  url          = {https://doi.org/10.5281/zenodo.19934129},
+  version      = {2.0.0},
+  license      = {CC-BY-4.0}
 }
 ```
 
