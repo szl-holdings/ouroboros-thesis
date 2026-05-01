@@ -1,0 +1,30 @@
+{
+  "name": "@szl-holdings/ouroboros-experiments",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Experiments harness for the Ouroboros Thesis v2 empirical companion paper.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --no-coverage",
+    "sweep": "tsx frontier-sweep/sweep.ts",
+    "rca": "tsx rca-bench/runner.ts",
+    "triage": "tsx triage-bench/runner.ts",
+    "sync": "tsx sync-bench/runner.ts",
+    "audit-randomize": "tsx audit-study/randomization.ts"
+  },
+  "dependencies": {
+    "@szl-holdings/ouroboros": "workspace:*",
+    "@workspace/aef-evidence-ledger": "workspace:*",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

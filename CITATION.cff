@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the empirical companion (v2) as below."
+title: "The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI"
+authors:
+  - family-names: Lutar
+    given-names: Stephen P.
+    affiliation: SZL Holdings
+date-released: 2026-04-30
+version: 2.0.0
+doi: 10.5281/zenodo.19934129
+url: https://github.com/szl-holdings/ouroboros-thesis
+license: CC-BY-4.0
+type: article
+keywords:
+  - adaptive computation
+  - recursive systems
+  - AI governance
+  - agent runtimes
+  - decision receipts
+  - auditable AI
+  - loop budget
+  - convergence traces
+  - reproducibility
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19934129
+    description: v2 — empirical companion (this work)
+  - type: doi
+    value: 10.5281/zenodo.19867281
+    description: v1 — position paper (predecessor)
+references:
+  - type: article
+    authors:
+      - family-names: Lutar
+        given-names: Stephen P.
+    title: "The Ouroboros Thesis: Looped Computation as a System Primitive for AI Systems"
+    year: 2026
+    doi: 10.5281/zenodo.19867281

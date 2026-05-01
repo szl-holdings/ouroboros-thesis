@@ -1,0 +1,34 @@
+{
+  "name": "amaru-small",
+  "description": "Small Amaru sync workload — 50 entities across 3 sources with deliberate drift on 12 entities.",
+  "runtimeVersion": "@szl-holdings/ouroboros@v6.1.0",
+  "scorer": "sync-diff-magnitude",
+  "instances": [
+    {
+      "id": "amaru_small_001",
+      "initialState": { "diff": 24, "iteration": 0 },
+      "transitions": [
+        { "output": { "diff": 14 }, "nextState": { "diff": 14, "iteration": 1 } },
+        { "output": { "diff": 6 }, "nextState": { "diff": 6, "iteration": 2 } },
+        { "output": { "diff": 2 }, "nextState": { "diff": 2, "iteration": 3 } },
+        { "output": { "diff": 0 }, "nextState": { "diff": 0, "iteration": 4 } }
+      ],
+      "groundTruth": { "diff": 0 },
+      "probeDeltas": [0.42, 0.33, 0.17],
+      "stakes": 1
+    },
+    {
+      "id": "amaru_small_002_nonconvergent",
+      "initialState": { "diff": 12, "iteration": 0 },
+      "transitions": [
+        { "output": { "diff": 9 }, "nextState": { "diff": 9, "iteration": 1 } },
+        { "output": { "diff": 11 }, "nextState": { "diff": 11, "iteration": 2 } },
+        { "output": { "diff": 8 }, "nextState": { "diff": 8, "iteration": 3 } },
+        { "output": { "diff": 10 }, "nextState": { "diff": 10, "iteration": 4 } }
+      ],
+      "groundTruth": { "diff": 0 },
+      "probeDeltas": [0.25, 0.22, 0.23],
+      "stakes": 1
+    }
+  ]
+}
