@@ -1,10 +1,24 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the empirical companion (v2) as below."
 title: "The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI"
+abstract: >-
+  The v1 Ouroboros Thesis was a position paper that argued bounded
+  loops with measurable convergence should be a first-class system
+  primitive for auditable AI. This v2 empirical companion supplies
+  what v1 deferred: a shipped reference implementation passing
+  142/142 deterministic tests, three production case studies on the
+  same kernel (A11oy, Sentra, Amaru) spanning seven verticals,
+  closure of the v1 §9 experimental agenda, and a §3.7 falsification
+  ledger naming the observations that would refute each load-bearing
+  claim — including a pre-registered commitment to publish a null
+  result for the trace-aided audit study. The narrow claim defended:
+  when convergence is measurable, the trace is not a log but a
+  deliverable.
 authors:
   - family-names: Lutar
     given-names: Stephen P.
     affiliation: SZL Holdings
+    email: rosalutar@gmail.com
 date-released: 2026-04-30
 version: 2.0.0
 doi: 10.5281/zenodo.19934129

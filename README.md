@@ -7,7 +7,9 @@
 [![Runtime tests](https://img.shields.io/badge/runtime%20tests-142%2F142-2da44e?style=flat-square)](https://github.com/szl-holdings/ouroboros)
 [![Contract](https://img.shields.io/badge/contract-v6.0.0-2b6cb0?style=flat-square)](./a11oy-ultimate-replit-payload.v6.json)
 [![Paper v2 (empirical)](https://img.shields.io/badge/paper-v2.0.0%20empirical-805ad5?style=flat-square)](./v2/paper/ouroboros-thesis-v2-empirical.pdf)
+[![Zenodo v2 (latest)](https://zenodo.org/badge/DOI/10.5281/zenodo.19934129.svg)](https://doi.org/10.5281/zenodo.19934129)
 [![Zenodo v1](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.19867281-1f78b4?style=flat-square)](https://doi.org/10.5281/zenodo.19867281)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-1f78b4?style=flat-square)](https://creativecommons.org/licenses/by/4.0/)
 [![NYSTEC](https://img.shields.io/badge/NYSTEC%20audit-2026--04--30-805ad5?style=flat-square)](https://github.com/szl-holdings/ouroboros/blob/main/docs/audit/szl-government-readiness.md)
 
 This repository hosts the canonical text and operational contract for the **Ouroboros Thesis**, the architectural rationale that underpins the [SZL Holdings](https://github.com/szl-holdings) product portfolio.
@@ -40,6 +42,30 @@ The narrow claim defended: **when convergence is measurable, the trace is not a 
 - 🚀 [`v2/release/`](./v2/release/) — release notes and GitHub-release playbook
 - 🎓 [`v2/submission/`](./v2/submission/) — Zenodo + arXiv playbooks and metadata
 - 📦 [`v2/PAYLOAD.md`](./v2/PAYLOAD.md) — full index of the v2 build
+
+---
+
+## How to cite
+
+If you use this work, please cite the v2 empirical companion:
+
+```bibtex
+@article{lutar2026ouroboros_v2,
+  author  = {Lutar, Stephen P.},
+  title   = {The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI},
+  journal = {Zenodo},
+  year    = {2026},
+  month   = apr,
+  doi     = {10.5281/zenodo.19934129},
+  url     = {https://doi.org/10.5281/zenodo.19934129},
+  version = {2.0.0},
+  license = {CC-BY-4.0}
+}
+```
+
+GitHub also auto-renders a one-click citation generator from [`CITATION.cff`](./CITATION.cff) — look for the **"Cite this repository"** button in the right sidebar.
+
+For reproducibility, every release on this repo auto-mints a versioned DOI on Zenodo, version-linked under the same concept DOI. To always cite the latest, use the [Zenodo concept DOI](https://doi.org/10.5281/zenodo.19934129).
 
 ---
 
