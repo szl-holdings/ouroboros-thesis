@@ -32,7 +32,7 @@ jobs:
     name: Validate runtime contract JSON
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Validate ouroboros-runtime-contract.v2.json parses
         run: |
           python3 -c "import json,sys; json.load(open('ouroboros-runtime-contract.v2.json')); print('contract: ok')"
@@ -41,7 +41,7 @@ jobs:
     name: Typecheck experiments harness
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -73,7 +73,7 @@ jobs:
     name: Paper file sanity
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Verify paper artifacts exist
         run: |
           test -f ouroboros-thesis-v2.md && echo "thesis md: ok"
