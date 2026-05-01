@@ -2,6 +2,8 @@
 
 > Bounded loops with measurable convergence as a first-class system primitive.
 
+[![CI](https://github.com/szl-holdings/ouroboros-thesis/actions/workflows/ci.yml/badge.svg)](https://github.com/szl-holdings/ouroboros-thesis/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/szl-holdings/ouroboros-thesis/actions/workflows/codeql.yml/badge.svg)](https://github.com/szl-holdings/ouroboros-thesis/actions/workflows/codeql.yml)
 [![Runtime tests](https://img.shields.io/badge/runtime%20tests-142%2F142-2da44e?style=flat-square)](https://github.com/szl-holdings/ouroboros)
 [![Contract](https://img.shields.io/badge/contract-v6.0.0-2b6cb0?style=flat-square)](./a11oy-ultimate-replit-payload.v6.json)
 [![Paper v2 (empirical)](https://img.shields.io/badge/paper-v2.0.0%20empirical-805ad5?style=flat-square)](./v2/paper/ouroboros-thesis-v2-empirical.pdf)
