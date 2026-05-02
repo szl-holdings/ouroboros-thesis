@@ -10,7 +10,9 @@
 
 This repository hosts the canonical text and operational contract for the **Ouroboros Thesis**, the architectural rationale that underpins the [SZL Holdings](https://github.com/szl-holdings) product portfolio.
 
-> **Notice — May 2 2026.** v3 (Zenodo 19951520, "Ouroboros Thesis v3 — The Lutar Invariant") was retracted by the author on 2026-05-02 due to overstated implementation and commercial claims discovered in self-audit. The Zenodo record is tombstoned with reason "retracted." The v3 paper files and the v4 forward-planning scope (which built on v3 as its foundation) have been removed from this repository. A rewritten v3 paper containing only verifiable claims is planned and will land in this repo when ready. v1 and v2 are unaffected and remain the citable record.
+> **Notice — May 2 2026.** v3 (Zenodo 19951520, "Ouroboros Thesis v3 — The Lutar Invariant") was retracted by the author on 2026-05-02 due to overstated implementation and commercial claims discovered in self-audit. The Zenodo record is tombstoned with reason "retracted." v1 and v2 are unaffected and remain the citable record.
+>
+> **Update — May 2 2026 (later same day).** The rewritten v3 has now landed at [`papers/v3/`](./papers/v3/). It contains only audit-supported claims; the full pre-publication audit is in [`papers/v3/AUDIT.md`](./papers/v3/AUDIT.md). A new DOI will be minted automatically by Zenodo on the GitHub Release.
 
 ---
 
@@ -20,8 +22,8 @@ This repository hosts the canonical text and operational contract for the **Ouro
 |---|---|---|---|
 | **Empirical companion** (latest published) | [`v2/paper/ouroboros-thesis-v2-empirical.pdf`](./v2/paper/ouroboros-thesis-v2-empirical.pdf) | Published 2026-04-30 | [10.5281/zenodo.19934129](https://doi.org/10.5281/zenodo.19934129) |
 | Position paper (v1) | [`ouroboros-thesis-v2.md`](./ouroboros-thesis-v2.md) | Published 2026-04-28 | [10.5281/zenodo.19867281](https://doi.org/10.5281/zenodo.19867281) |
-| v3 (Lutar Invariant) | — | **Retracted 2026-05-02** by author | [10.5281/zenodo.19951520](https://doi.org/10.5281/zenodo.19951520) (tombstone) |
-| v3 rewrite (planned) | — | Not yet drafted | — |
+| v3 (Lutar Invariant) — original | — | **Retracted 2026-05-02** by author | [10.5281/zenodo.19951520](https://doi.org/10.5281/zenodo.19951520) (tombstone) |
+| v3 (Lutar Invariant) — rewrite | [`papers/v3/ouroboros-thesis-v3.pdf`](./papers/v3/ouroboros-thesis-v3.pdf) | **Published 2026-05-02** (audit-supported rewrite) | Pending Zenodo (auto-mint on Release) |
 
 > **Naming note:** the file `ouroboros-thesis-v2.md` in the repo root is the *v1 position paper text* (Zenodo 19867281). The empirical companion is the formal v2 publication and lives under [`v2/`](./v2/).
 
