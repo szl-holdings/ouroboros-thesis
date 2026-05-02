@@ -34,7 +34,7 @@ Headline framings:
 - Abstract opens with "v1 proposed; v2 measures."
 - §3 names the actual TypeScript modules (`loop-kernel.ts`, `depth-allocator.ts`, `consistency.ts`) and reproduces the relevant code in appendices.
 - §3.5 introduces the v6 contract layer that v1 doesn't mention — free differentiation.
-- §6 presents governance as procurement evidence (NIST AI RMF, EU AI Act Art. 12, NYSTEC scorecards), not advocacy.
+- §6 presents governance as procurement evidence (NIST AI RMF, EU AI Act Art. 12), not advocacy.
 - §7 names every limitation explicitly, including small-N caveats.
 
 ### Track B — Experiments harness
@@ -184,7 +184,7 @@ PonderNet, Ouro, and decision-receipt literature."
 - **Author voice is yours, not generic AI prose.** Edit the paper. Cut what feels off. The epigraph stays.
 - **Cross-system distillation stays a hypothesis.** v1 §8. Don't promote it to a result in v2 — that's v3 territory and would damage credibility.
 - **Effect sizes, not p-values, in §5.4.** N is small. Honesty is currency.
-- **Trace-as-deliverable framing in §6, not as ideal.** NYSTEC scorecards make this concrete; lean on them.
+- **Trace-as-deliverable framing in §6, not as ideal.** Map directly to the NIST AI RMF and EU AI Act Article 12 trace requirements.
 - **No new primitives.** v2 measures the four primitives v1 named. The v6 contract is a *system-design* contribution, not a new primitive — keep that distinction in §3.5.
 - **MIT for the harness, proprietary for the runtime.** Two separate licenses. The paper says so explicitly.
 
