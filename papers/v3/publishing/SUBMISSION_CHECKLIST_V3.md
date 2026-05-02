@@ -1,3 +1,7 @@
+> **RETRACTED — May 1 2026.** This file contains numbers and partner attributions that were not true at the time of writing. Specifically: claims of "1,372 tests passing (925 TypeScript + 447 Python) across 24 packages" should be read as "150 declared Vitest tests in the single `@szl-holdings/ouroboros` package." Pricing tables, the federal lighthouse $360K figure, AWS Marketplace product, Lambda-as-a-Service product, and named vendor partners (Booz Allen Hamilton, Truist Financial, Northwell Health) were aspirational and never executed. Empire APEX (administered by NYSTEC) is a counseling resource the founder engaged with on 2026-04-30, not an audit, not a customer, not a funder. The mathematical content of the paper (the four axioms, the uniqueness proof, the bound theorem, the nine axes, the falsification ledger) is unchanged and correct. The published paper at [DOI 10.5281/zenodo.19951520](https://doi.org/10.5281/zenodo.19951520) carries the same correction notice. This announcement/playbook draft is preserved for history; the corrected ground truth lives in [`papers/v3/OUROBOROS_THESIS_V3.md`](../OUROBOROS_THESIS_V3.md) and [`README.md`](../../../README.md).
+
+---
+
 # Ouroboros Thesis v3 — Submission Checklist
 
 **Owner:** Stephen P. Lutar
