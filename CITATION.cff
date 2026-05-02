@@ -1,68 +1,34 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite the latest version (v3) as below."
-title: "Ouroboros Thesis v3 — The Lutar Invariant: A Nine-Axis Closed-Form Scalar Law for Runtime Trust in Agentic AI Systems"
-abstract: >-
-  We introduce the Lutar Invariant Λ, a closed-form scalar in [0, 1]
-  that aggregates nine independent runtime-trust axes — Cleanliness,
-  Horizon, Resonance, Frustum, Geometry, Invariance, Moral, Being,
-  Soul — into a single auditable number. The invariant is derived
-  from first principles, instrumented in a production runtime
-  (@szl-holdings/ouroboros v6.1.0), and validated against 1,372
-  tests (925 TypeScript and 447 Python). Where v1 of the Ouroboros
-  Thesis was a position paper and v2 an empirical companion, v3 is
-  the formal scalar law: a single bounded number that summarises
-  whether an agentic AI system is currently trustworthy, computable
-  at any tick, with auditable per-axis decomposition. The paper
-  proves Λ's monotonicity and bounds, derives the nine axes from
-  the loop-as-primitive thesis, gives the production formula, and
-  publishes the full test ledger that establishes empirical
-  invariance across A11oy, Sentra, Amaru, Counsel, Terra, Vessels,
-  and Carlota Jo.
+message: "If you use this work, please cite the empirical companion (v2) as below."
+title: "The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI"
 authors:
   - family-names: Lutar
     given-names: Stephen P.
     affiliation: SZL Holdings
-    email: stephen@szlholdings.com
-    orcid: "https://orcid.org/0009-0001-0110-4173"
-date-released: 2026-05-01
-version: 3.0.0
-doi: 10.5281/zenodo.19951520
+date-released: 2026-04-30
+version: 2.0.0
+doi: 10.5281/zenodo.19934129
 url: https://github.com/szl-holdings/ouroboros-thesis
 license: CC-BY-4.0
 type: article
 keywords:
-  - agentic AI
+  - adaptive computation
+  - recursive systems
   - AI governance
-  - runtime trust
-  - Lutar Invariant
-  - closed-form scalar law
-  - bounded recursion
-  - auditable AI
+  - agent runtimes
   - decision receipts
+  - auditable AI
+  - loop budget
   - convergence traces
   - reproducibility
-  - nine-axis trust
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.19951520
-    description: v3 — The Lutar Invariant (this work, latest)
-  - type: doi
-    value: 10.5281/zenodo.19944926
-    description: Concept DOI — always resolves to the latest version
-  - type: doi
     value: 10.5281/zenodo.19934129
-    description: v2 — empirical companion
+    description: v2 — empirical companion (this work)
   - type: doi
     value: 10.5281/zenodo.19867281
-    description: v1 — position paper
+    description: v1 — position paper (predecessor)
 references:
-  - type: article
-    authors:
-      - family-names: Lutar
-        given-names: Stephen P.
-    title: "The Loop Is the Product: Measuring Bounded Recursion as a System Primitive for Auditable AI"
-    year: 2026
-    doi: 10.5281/zenodo.19934129
   - type: article
     authors:
       - family-names: Lutar
