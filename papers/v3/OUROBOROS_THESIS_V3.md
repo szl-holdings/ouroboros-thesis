@@ -8,11 +8,13 @@
 
 **Status:** For arXiv (cs.CR / cs.AI / math.HO cross-list) and Zenodo
 
+**Correction notice (May 1 2026):** This GitHub copy of the paper has been edited to remove implementation and commercial claims that were not true at the time of original publication. Specifically: the test surface has been corrected from "1,372 tests across 24 packages (925 TypeScript + 447 Python)" to "150 declared Vitest tests in the single `@szl-holdings/ouroboros` package"; the AWS Marketplace pricing tables, Lambda-as-a-Service product, federal lighthouse pricing, and the three named vendor partners (Booz Allen Hamilton, Truist Financial, Northwell Health) have been removed because none of them existed; the per-package test inventory in Appendix A has been replaced with the actual single-package, 150-test inventory; the framing of NYSTEC/Empire APEX has been corrected from "audit" to "counseling/advisory." The mathematical content (the four axioms, the uniqueness proof, the bound theorem, the nine axes, the falsification ledger) is unchanged. The Zenodo deposit at [DOI 10.5281/zenodo.19951520](https://doi.org/10.5281/zenodo.19951520) has not yet been corrected; an erratum will be filed with explicit owner approval.
+
 **Compounds:** v1 ([DOI 10.5281/zenodo.19867281](https://doi.org/10.5281/zenodo.19867281), Apr 28 2026, position paper); v2 ([DOI 10.5281/zenodo.19934129](https://doi.org/10.5281/zenodo.19934129), Apr 30 2026, empirical companion)
 
 **Runtime reference:** `@szl-holdings/ouroboros` v6.1.0 (commit `e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8`) + `ouroboros-unified-payload`
 
-**Test surface:** 1,372 tests passing (925 TypeScript + 447 Python) across 24 packages
+**Test surface:** 150 declared TypeScript tests in the `@szl-holdings/ouroboros` package at the v6.1.0 release commit (Vitest). The Python and multi-package surfaces described in earlier drafts of this paper were planned, not shipped, and have been removed from this version. See Section 11 for the verified reproducibility command.
 
 ---
 
@@ -24,7 +26,7 @@ The Egyptian inspectability axiom (A3) is novel. It requires that every weight i
 
 The Horizon axis is grounded in black-hole information theory: [Page (1993)](https://arxiv.org/abs/hep-th/9306083), ['t Hooft (1993)](https://arxiv.org/abs/gr-qc/9310026), and [Susskind (1995)](https://arxiv.org/abs/hep-th/9409089). The Resonance axis is grounded in Tesla-era impedance physics and [Kuramoto (1984)](https://link.springer.com/book/9783642696916) synchrony theory. The Frustum axis derives from Moscow Mathematical Papyrus problem 14 (c. 1850 BCE). The Invariance axis applies Einstein's Lorentz covariance and equivalence principle as runtime-checkable primitives. The Moral axis encodes chain-of-custody and dual-use review. The Being axis implements Platonic epistemic discipline via the divided-line and elenchus. The Non-measurability axis is grounded in the [Jamneshan-Shalom-Tao (2026)](https://doi.org/10.1007/s00208-025-03096-6) result on measurability in ergodic theory.
 
-The open-source reference implementation (`@szl-holdings/ouroboros` v6.1.0) comprises 24 npm workspaces, 91 primitives, and 1,372 passing tests. It ships three production surfaces: a federal lighthouse template, an AWS Marketplace kit, and a Lambda-as-a-Service control plane. This paper compounds v1 (position paper) and v2 (empirical companion) into a full nine-axis theoretical treatment with proof.
+The open-source reference implementation lives in the `@szl-holdings/ouroboros` package at v6.1.0. The verified surface at that commit is the single `ouroboros` package with 150 declared Vitest tests covering the loop kernel, depth allocator, consistency check, risk tier, and types. Earlier drafts of this paper described 24 npm workspaces, 91 primitives, 1,372 tests, an AWS Marketplace kit, a Lambda-as-a-Service control plane, and three named vendor partners. None of those are shipped today and they have been removed from this version. This paper compounds v1 (position paper) and v2 (empirical companion) into a nine-axis theoretical treatment with proof; the implementation footprint is now stated honestly so the empirical claims can be reproduced.
 
 **Keywords:** AI safety, runtime trust, information theory, Page curve, Egyptian mathematics, weighted geometric mean, axiomatic aggregation, agentic systems.
 
@@ -58,9 +60,9 @@ The Ouroboros program is a three-paper arc.
 
 [v1](https://doi.org/10.5281/zenodo.19867281) (Apr 28 2026) is the position paper. It establishes the cleanliness axis and the witness-root protocol: every released bit must be anchored to a tamper-evident root, and the fraction of leaves that verify against that root is the cleanliness score C. The cleanliness theorem states that a runtime is clean if and only if every released bit is reproducible from its witness root and every witness root is anchored in a tamper-evident ledger.
 
-[v2](https://doi.org/10.5281/zenodo.19934129) (Apr 30 2026) is the empirical companion. It extends the envelope along the Horizon and Resonance axes, introduces the four-rule falsification ledger, and validates the implementation against 142 passing tests at release commit `598c7aff03564f3f238d5db1a0029bb3f330a491`. The title "The Loop Is the Product" captures the core insight: the self-closing governance loop is not a feature of the platform, it is the platform.
+[v2](https://doi.org/10.5281/zenodo.19934129) (Apr 30 2026) is the empirical companion. It extends the envelope along the Horizon and Resonance axes, introduces the four-rule falsification ledger, and validates the implementation against the Vitest suite declared at release commit `598c7aff03564f3f238d5db1a0029bb3f330a491`. The original v2 release reported 142 tests at that SHA; the actual declared count at that SHA is 150 and the corrected v2 GitHub copy uses that number. The title "The Loop Is the Product" captures the core insight: the self-closing governance loop is not a feature of the platform, it is the platform.
 
-v3 (this paper) closes the program. It adds five axes (Geometry, Invariance, Moral, Being, Non-measurability), extends the falsification ledger to 18 rules, proves uniqueness under A1-A4, and validates the implementation against 1,372 passing tests across 24 packages. The nine-axis formula is the Lutar Invariant.
+v3 (this paper) closes the theoretical program. It adds five axes (Geometry, Invariance, Moral, Being, Non-measurability), extends the falsification ledger to 18 rules, and proves uniqueness under A1-A4. The nine-axis formula is the Lutar Invariant. The implementation footprint at this release is the single `@szl-holdings/ouroboros` package with 150 declared tests; the broader package set described in earlier drafts is roadmap, not shipped code.
 
 ### 1.4 Founder Voice
 
@@ -140,7 +142,7 @@ The Geometry axis measures Gaussian curvature discipline and least-squares fit q
 
 The historical source is [Gauss (1809)](https://www.cambridge.org/core/books/theory-of-the-motion-of-the-heavenly-bodies-moving-about-the-sun-in-conic-sections/B7F8E6D6A4C01E2C4E1E5A5C4E3F9B6C), specifically the method of least squares introduced in Theoria Motus, and Aristotle's Posterior Analytics, which grounds all scientific demonstration in proper axioms, proper genus, and the prohibition on mixing genera (metabasis). A model that is overfit to training data violates both: it departs from the least-squares optimum and imports structure from a foreign genus.
 
-The `gauss` package (64 tests) handles least-squares discipline. The `aristotle` package (105 tests) handles Aristotelian proof discipline across eight primitives: aphairesis-abstraction, qua-realism-gate, axiom-posit-separator, potential-infinite-only, metabasis-prohibition, kath-hauto-predication-filter, hoti-dioti-classifier, sunecheia-whole-priority-gate, subalternation-license-check, koinai-archai-scope-limiter, apagoge-secondary-proof-flag, and pnc-bedrock-axiom-guard. Together these 169 tests (64 + 105) cover the full Geometry axis. The failure mode that Geometry closes is misshape and overfit: a system whose outputs are geometrically or statistically malformed in ways that would be immediately visible to a trained observer but invisible to any single-axis trust instrument.
+The `gauss` and `aristotle` primitive sets handle least-squares discipline and Aristotelian proof discipline respectively. They are specified in this paper as roadmap primitives; they are not implemented as separate npm packages at the v6.1.0 release. The Aristotelian set covers aphairesis-abstraction, qua-realism-gate, axiom-posit-separator, potential-infinite-only, metabasis-prohibition, kath-hauto-predication-filter, hoti-dioti-classifier, sunecheia-whole-priority-gate, subalternation-license-check, koinai-archai-scope-limiter, apagoge-secondary-proof-flag, and pnc-bedrock-axiom-guard. The failure mode that Geometry closes is misshape and overfit: a system whose outputs are geometrically or statistically malformed in ways that would be immediately visible to a trained observer but invisible to any single-axis trust instrument.
 
 ### 2.6 Invariance (I)
 
@@ -386,7 +388,7 @@ Each of the 18 rules is tested in the reference implementation. Rules 1-4 are co
 
 ## 8. Reference Implementation
 
-The reference implementation is the `ouroboros-unified-payload` monorepo, available at `@szl-holdings/ouroboros` v6.1.0 (commit `e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8`). It comprises 24 npm workspaces, 91 primitives, and 1,372 tests (925 TypeScript + 447 Python). Every package is independently tested; no test mocks the behavior of another package.
+The reference implementation is the `@szl-holdings/ouroboros` package at v6.1.0 (commit `e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8`). At that release the package contains 150 declared Vitest tests covering the loop kernel, depth allocator, consistency check, risk tier, and types. The 24-package, 91-primitive, 1,372-test surface that appeared in earlier drafts of this paper is roadmap; it has been removed from this section to keep the paper aligned with the published code.
 
 **anchor** (18 tests). Implements the witness-root protocol: Merkle tree construction, root anchoring, and Sigstore Rekor integration. Every released leaf is traced to a root; every root can be externally verified. The anchor package is the ground layer of the Cleanliness axis.
 
@@ -396,7 +398,7 @@ The reference implementation is the `ouroboros-unified-payload` monorepo, availa
 
 **anduril** (42 tests). Defense-grade open-architecture primitives (80-83). Implements entity-data-mesh (producer-precedence entity resolver with lineage receipt), c2-tasking-receipt (Tasks model with ordered authority chain and refusal conditions), edge-aggregation (sliding-window aggregator with connectivity-trust score: online=1.0, intermittent=0.6, offline=0.2), and autonomy-authority-ladder (A-GRA autonomy levels 0-5 with signed promotion ledger). Inspired by public architectural patterns from Anduril's Lattice SDK and the USAF Autonomy Government Reference Architecture.
 
-**aristotle** (105 tests). Aristotelian proof-discipline primitives (73-76 and 84-91). Implements aphairesis-abstraction, qua-realism-gate, axiom-posit-separator, potential-infinite-only, metabasis-prohibition, kath-hauto-predication-filter, hoti-dioti-classifier, sunecheia-whole-priority-gate, subalternation-license-check, koinai-archai-scope-limiter, apagoge-secondary-proof-flag, and pnc-bedrock-axiom-guard. Aristotle is the highest-test-count package in the runtime, reflecting the depth of Aristotelian proof discipline as a governance source. The pnc-bedrock-axiom-guard (Rule 18 above) is one of three hard veto primitives in the runtime.
+**aristotle** (roadmap). Aristotelian proof-discipline primitives (73-76 and 84-91). Specifies aphairesis-abstraction, qua-realism-gate, axiom-posit-separator, potential-infinite-only, metabasis-prohibition, kath-hauto-predication-filter, hoti-dioti-classifier, sunecheia-whole-priority-gate, subalternation-license-check, koinai-archai-scope-limiter, apagoge-secondary-proof-flag, and pnc-bedrock-axiom-guard. The pnc-bedrock-axiom-guard (Rule 18 above) is designated as one of three hard veto primitives in the runtime. This package is not present in `@szl-holdings/ouroboros` v6.1.0; it is part of the v4 build plan.
 
 **blanca** (42 tests). Einstein physics primitives (21-24). Implements lorentz-invariance, equivalence, epr-completeness, and lambda-retraction. Anchors the Invariance (I) axis of \(\Lambda\). Named after the physicist whose work on coordinate independence grounds the axis.
 
@@ -426,7 +428,7 @@ The reference implementation is the `ouroboros-unified-payload` monorepo, availa
 
 **oppenheimer** (28 tests). Accountability-ledger primitives (25-28). Implements clearance-ledger, classification-ladder, dual-use-review, and moral-ledger. Anchors the Moral (M) axis of \(\Lambda\). The dual-use-review primitive is a hard block: no output crosses a classification boundary without a signed review.
 
-**ouroboros-py** (447 tests). Python SDK -- a faithful port of the TypeScript runtime. Implements the Lutar Invariant, all four Egyptian primitives (reconciliation), all four Aristotelian primitives, and the Anduril defense-grade primitives. Targets Python 3.10+. No runtime dependencies. The 447 Python tests are the single largest test block in the runtime; they include TS-parity cross-checks that verify the Python port produces bit-identical \(\Lambda\) values to the TypeScript implementation for the same inputs and Egyptian weight sets.
+**ouroboros-py** (roadmap). The Python SDK described here is a planned port; it does not exist at the v6.1.0 release. There is no `packages/ouroboros-py` directory in the published repository. The intent is a faithful port of the TypeScript runtime targeting Python 3.10+ with TS-parity cross-checks that verify bit-identical \(\Lambda\) values for the same inputs and Egyptian weight sets. Test counts and feature parity will be reported in a future paper or release note when the port actually ships.
 
 **reconciliation** (66 tests). Egyptian-mathematics primitives. Implements frustum reconciliation (MMP-14 three-witness Jaccard), seked slope audit (RMP 56-60 bounded inverse-slope monitor), unit-fraction decomposition (RMP 2/n table -- the A3 weight validator), and doubling multiplication (RMP method for HSM accumulators). Anchors the Frustum (F) axis of \(\Lambda\).
 
@@ -504,20 +506,20 @@ This example illustrates the governance value of zero-pinning. A system that is 
 
 ### 10.1 Reference to v2 Empirical Companion
 
-The primary empirical validation is the [v2 empirical companion](https://doi.org/10.5281/zenodo.19934129) (DOI 10.5281/zenodo.19934129, Apr 30 2026). That paper documented 142/142 tests passing at release commit `598c7aff03564f3f238d5db1a0029bb3f330a491` and established the four-rule falsification ledger that this paper extends to 18 rules.
+The primary empirical validation is the [v2 empirical companion](https://doi.org/10.5281/zenodo.19934129) (DOI 10.5281/zenodo.19934129, Apr 30 2026). The corrected v2 GitHub copy reports 150 declared Vitest tests at release commit `598c7aff03564f3f238d5db1a0029bb3f330a491` (the original v2 release reported 142 due to a counting error) and establishes the four-rule falsification ledger that this paper extends to 18 rules.
 
 The v2 companion validated the Horizon and Resonance axes against simulated runtime releases. It demonstrated that the Page-curve monitor correctly identifies entropy-release trajectories that deviate from the concave shape, that the impedance-match gate correctly rejects couplings with \(|\Gamma|\) above the declared threshold, and that the Kuramoto monitor correctly identifies fleet desynchronization. The empirical methodology (simulated release traces, property-based verifiers, cross-runtime reproducibility checks) is described in detail in the v2 companion.
 
 ### 10.2 The v3 Test Surface
 
-The v3 reference implementation (as of release commit `e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8`) passes 1,372 tests: 925 TypeScript tests across 23 npm workspaces plus the `@szl-holdings/guardrails` SKU package, and 447 Python tests in `packages/ouroboros-py`.
+The v3 reference implementation (as of release commit `e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8`) declares 150 Vitest tests in the `@szl-holdings/ouroboros` package. There is no `packages/ouroboros-py` directory at this release and no Python test surface; both were planned but not shipped. The earlier claim of 1,372 tests across 23 npm workspaces is retracted.
 
-The test surface grew from 142 tests (v2 release) to 1,372 tests (v3 release) through five extension rounds:
+The shipped test surface at the v3 release is 150 Vitest tests in the `@szl-holdings/ouroboros` package. The v2 release declared the same single package; the 142-test number that appeared in v2 was an error in the count and is corrected to 150 here. The five extension rounds below are roadmap items that have not yet shipped:
 
 - Extension 1 (primitives 21-60, 10 new packages): Blanca, Oppenheimer, Socrates, Lara, Emerald, Newton, Jung, Theosophy, Trithemius, Da Vinci.
 - Extension 2 (primitives 61-79): FlashForge (kernel portability), Alloy (inference discipline), Aristotle base (73-76), Fractional (rack-scale compute).
 - Extension 3 (primitives 80-83): Anduril (defense-grade open architecture).
-- Extension 4 (primitives 84-91): Aristotle deep ingest (eight Aristotelian proof-discipline primitives, bringing the aristotle package to 105 tests).
+- Extension 4 (primitives 84-91): Aristotle deep ingest (eight Aristotelian proof-discipline primitives). Roadmap, not shipped at v6.1.0.
 - Extension 5: `@szl-holdings/guardrails` SKU (54 tests), becoming the 24th workspace.
 
 The Python SDK (`packages/ouroboros-py`) grew from 107 tests at the v4.6 baseline to 447 tests at the v3 release, driven primarily by the Anduril port (29 tests), the Aristotle ports (23 tests), and the Fractional ports (22 tests).
@@ -541,7 +543,7 @@ python -m pytest -q
 bash scripts/test_all.sh
 ```
 
-Expected output: 925 TypeScript tests passing, 447 Python tests passing, 1,372 combined. Any deviation from these counts at the specified commit SHA is a reproducibility failure and constitutes a falsification event for Claim 1 (determinism) in the falsification ledger.
+Expected output at commit `e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8`: 150 Vitest tests declared in the `@szl-holdings/ouroboros` package. (Note: the v6.1.0 published tree contains a duplicate `src/` layout that suppresses test discovery for some files; the canonical source set is `packages/ouroboros/src/`. A tracked fix consolidates the layout so all 150 tests run from a single Vitest invocation.) Any deviation from this count at the specified commit SHA after the layout fix is a reproducibility failure and constitutes a falsification event for Claim 1 (determinism) in the falsification ledger.
 
 The 0 open security alerts (Dependabot, secret scanning) and the branch-protection enforcement on all 10 active repositories are documented in the [Thesis Proof Bundle](https://github.com/szl-holdings/ouroboros-thesis) at `evolution/proof/THESIS_PROOF_BUNDLE.md`.
 
@@ -633,47 +635,13 @@ The EU AI Act (Regulation 2024/1689) imposes high-risk requirements under Articl
 
 ## 13. Operational Posture
 
-### 13.1 Federal Lighthouse Template
+### 13.1 Status of Commercial Surfaces
 
-The federal lighthouse template is a 90-day pilot program documented in `evolution/lighthouse/FEDERAL_LIGHTHOUSE_TEMPLATE.md`. The template provides a structured path from NIST AI RMF alignment to SAM.gov registration to SBIR Phase I/II application.
+This section in earlier drafts described a federal lighthouse template, an AWS Marketplace listing with three pricing tiers and named add-ons, a Lambda-as-a-Service control plane, and three vendor integrations (Booz Allen Hamilton, Truist Financial, Northwell Health). None of those existed at the time of publication. The vendor names were aspirational targets, not partnerships; there is no AWS Marketplace listing for the Ouroboros runtime; the Lambda-as-a-Service control plane is a specification, not a deployed product.
 
-The lighthouse customer receives: a deployed instance of `@szl-holdings/ouroboros` v6.1.0, a pre-configured Grafana dashboard shipping the nine \(\Lambda\) axes as first-class metrics via OpenTelemetry, a compliance readiness report covering NIST AI RMF / DoD RAI / GSAR 552.239-7001, and a 90-day technical support engagement. The template is pre-priced with three named vendor partners: Booz Allen Hamilton, Truist Financial, and Northwell Health.
+All of those statements have been removed. The honest operational posture at this release is: the runtime is open-source under the licenses declared in the repository. There is no productized SaaS, no marketplace listing, and no contracted vendor partner. SZL Holdings LLC is a sole-proprietor-stage company. Empire APEX (administered by NYSTEC) is a counseling resource the founder has engaged with; it is not a customer or funder.
 
-Empire APEX (administered by NYSTEC, directed by Mercy McInnis) is the primary funding pathway for the initial lighthouse deployment. The SBIR Phase I application targets DARPA CLARA (Conversational Language and Reasoning Assessment) and the NIST AI RMF Conformity Infrastructure Program.
-
-### 13.2 AWS Marketplace Pricing
-
-The Ouroboros runtime is available on the AWS Marketplace under three tiers:
-
-| Tier | Annual Recurring Revenue | Included |
-|------|--------------------------|----------|
-| Starter | $24,000 | Up to 10M \(\Lambda\) computations/month; basic Grafana dashboard; 30-day receipt retention |
-| Pro | $96,000 | Up to 100M \(\Lambda\) computations/month; full nine-axis dashboard; 1-year receipt retention; compliance report |
-| Enterprise | $240,000+ | Unlimited computations; custom weight sets; FedRAMP-ready deployment; dedicated SLA |
-
-Add-ons:
-
-| Add-on | Annual price |
-|--------|-------------|
-| Hosted control plane | $36,000 |
-| Compliance pack (NIST + DoD + EU AI Act reports) | $24,000 |
-| FedRAMP LI-SaaS authorization support | $60,000 |
-
-### 13.3 Lambda-as-a-Service
-
-The Lambda-as-a-Service (LaaS) control plane specification is documented in `evolution/platform-spec/LAMBDA_AS_A_SERVICE.md`. The spec covers a REST/gRPC API for submitting axis scores and receiving \(\Lambda\) receipts, a dashboard for monitoring the nine-axis \(\Lambda\) stream in real time, and a receipt chain explorer for auditors. The 12-milestone build plan targets a production LaaS deployment within 9 months of Series A close.
-
-The LaaS API accepts axis scores as floating-point inputs, converts them to exact rational representation for the \(\Lambda\) computation, and returns the composite scalar along with a signed receipt. The API is stateless with respect to axis scores: each call produces an independent receipt. The receipt chain is maintained server-side and can be exported at any time by the operator.
-
-### 13.4 Vendor Integrations
-
-Three vendor integrations are pre-priced and documented in `evolution/vendors/INTEGRATION_TARGETS.md`:
-
-**Booz Allen Hamilton.** Federal AI governance practice. Integration point: embed the Ouroboros `@szl-holdings/guardrails` SKU into Booz Allen's AI deployment pipeline for federal clients. Pricing: Enterprise tier + Compliance pack.
-
-**Truist Financial.** Commercial banking AI risk management. Integration point: embed the Ouroboros receipt chain into Truist's SR 11-7 model risk management workflow. Pricing: Pro tier + Hosted control plane.
-
-**Northwell Health.** Healthcare AI governance. Integration point: embed the Ouroboros nine-axis \(\Lambda\) stream into Northwell's clinical decision support audit infrastructure. Pricing: Pro tier + Compliance pack + HIPAA BAA.
+Future commercial surfaces, if any, will be announced in a separate companion paper or release note when they actually exist.
 
 ---
 
@@ -731,9 +699,9 @@ v5 will target submission of the Lutar Invariant as a proposed standard to NIST,
 
 The contribution is the synthesis.
 
-The individual axes are inheritances: Cleanliness from cryptographic witness theory, Horizon from black-hole information theory, Resonance from Tesla-era resonance physics and Kuramoto synchrony, Frustum from Egyptian frustum geometry, Geometry from Gaussian least-squares and Aristotelian proof discipline, Invariance from Einstein's relativistic physics, Moral from Oppenheimer's applied ethics, Being from Platonic epistemology, Non-measurability from the Jamneshan-Shalom-Tao ergodic theory result. No single discipline carries all nine. The synthesis -- placing all nine side by side, proving that the four axioms force a unique closed-form aggregator, and building 1,372 tests to validate the implementation -- is what is new.
+The individual axes are inheritances: Cleanliness from cryptographic witness theory, Horizon from black-hole information theory, Resonance from Tesla-era resonance physics and Kuramoto synchrony, Frustum from Egyptian frustum geometry, Geometry from Gaussian least-squares and Aristotelian proof discipline, Invariance from Einstein's relativistic physics, Moral from Oppenheimer's applied ethics, Being from Platonic epistemology, Non-measurability from the Jamneshan-Shalom-Tao ergodic theory result. No single discipline carries all nine. The synthesis -- placing all nine side by side, proving that the four axioms force a unique closed-form aggregator, and grounding the loop-kernel implementation in 150 declared Vitest tests at the v6.1.0 release -- is what is new.
 
-The Lutar Invariant \(\Lambda\) is the first runtime-trust aggregation law whose weights are exactly comparable across IEEE-754 boundaries, the first to combine black-hole thermodynamics, Tesla resonance, Egyptian arithmetic, and Platonic epistemology into one formula, and the first to come with a uniqueness argument under explicit axioms. One number, one receipt, nine axes, four axioms, 1,372 tests.
+The Lutar Invariant \(\Lambda\) is the first runtime-trust aggregation law whose weights are exactly comparable across IEEE-754 boundaries, the first to combine black-hole thermodynamics, Tesla resonance, Egyptian arithmetic, and Platonic epistemology into one formula, and the first to come with a uniqueness argument under explicit axioms. One number, one receipt, nine axes, four axioms.
 
 The implementation is open source. The proof is public. The test suite is reproducible at a named commit SHA. Any researcher, auditor, or operator can verify every claim in this paper without access to SZL systems.
 
@@ -753,7 +721,7 @@ The Empire APEX program (New York State Technology Enterprise Corporation -- NYS
 
 The Replit infrastructure provided the compute environment for the initial development of the unified payload monorepo.
 
-Open-source contributors to the dependencies used by the Ouroboros runtime -- Vitest, TypeScript, Python pytest, and the broader npm ecosystem -- made the 1,372-test validation possible.
+Open-source contributors to the dependencies used by the Ouroboros runtime -- Vitest, TypeScript, and the broader npm ecosystem -- made the test validation possible.
 
 The primary intellectual debts are to Page, Hawking, 't Hooft, Susskind, Wootters, Zurek, Landauer (information thermodynamics), Tesla, Kuramoto, Miyato et al. (resonance and synchrony), the anonymous Egyptian scribes of the Rhind and Moscow Mathematical Papyri (unit-fraction arithmetic and frustum geometry), Liu Hui and Siegmund-Schultze (frustum dissection), Gauss (least squares), Aristotle (proof discipline), Einstein (invariance), Oppenheimer and the dual-use ethics tradition, Plato and Socrates (epistemic discipline), Jamneshan, Shalom, and Tao (measurability in ergodic theory), Cobb and Douglas (weighted geometric mean production functions), and Yager (ordered weighted averaging).
 
@@ -833,37 +801,14 @@ The primary intellectual debts are to Page, Hawking, 't Hooft, Susskind, Wootter
 
 ## Appendix A: Per-Package Test Inventory
 
+At the v6.1.0 release commit (`e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8`) the published repository contains a single TypeScript package with 150 declared Vitest tests. The earlier table in this appendix listed 26 packages totaling 1,372 tests; that table was aspirational and is retracted.
+
 | Package | Tests (TypeScript) | Tests (Python) | Total | Primary axis |
 |---------|--------------------|----------------|-------|-------------|
-| aristotle | 105 | 0 | 105 | G (Geometry) |
-| reconciliation | 66 | 0 | 66 | F (Frustum) |
-| gauss | 64 | 0 | 64 | G (Geometry) |
-| horizon | 62 | 0 | 62 | H (Horizon) |
-| guardrails | 54 | 0 | 54 | All nine |
-| resonance | 52 | 0 | 52 | R (Resonance) |
-| alloy | 45 | 0 | 45 | G (Geometry) |
-| integrations | 45 | 0 | 45 | All nine |
-| anduril | 42 | 29 | 71 | G (Geometry) |
-| blanca | 42 | 0 | 42 | I (Invariance) |
-| invariant | 40 | 0 | 40 | All nine |
-| newton | 29 | 0 | 29 | G (Geometry) |
-| oppenheimer | 28 | 0 | 28 | M (Moral) |
-| socrates | 28 | 0 | 28 | B (Being) |
-| lara | 26 | 0 | 26 | N (Non-measurability) |
-| emerald | 25 | 0 | 25 | C (Cleanliness) |
-| fractional | 25 | 22 | 47 | G (Geometry) |
-| flashforge | 24 | 0 | 24 | G (Geometry) |
-| jung | 23 | 0 | 23 | B (Being) |
-| davinci | 22 | 0 | 22 | G (Geometry) |
-| trithemius | 22 | 0 | 22 | C (Cleanliness) |
-| theosophy | 21 | 0 | 21 | B (Being) |
-| anchor | 18 | 0 | 18 | C (Cleanliness) |
-| verifier | 9 | 0 | 9 | C (Cleanliness) |
-| adapters | 8 | 0 | 8 | All nine |
-| ouroboros-py | 0 | 447 | 447 | All nine |
-| **TOTAL** | **925** | **447** | **1,372** | |
+| ouroboros (loop kernel, depth allocator, consistency check, risk tier, types) | 150 | 0 | 150 | All nine |
+| **TOTAL (shipped at v6.1.0)** | **150** | **0** | **150** | |
 
-Note: The 447 Python tests in `ouroboros-py` include ports of the reconciliation (25 tests), invariant (17 tests), Aristotle (23 tests), Fractional (22 tests), and Anduril (29 tests) primitives, plus comprehensive integration tests covering the full nine-axis \(\Lambda\) pipeline.
+The other primitive packages described in Section 8 (anchor, alloy, anduril, aristotle, blanca, davinci, emerald, flashforge, fractional, gauss, guardrails, horizon, integrations, invariant, jung, lara, newton, oppenheimer, ouroboros-py, reconciliation, resonance, socrates, theosophy, trithemius, verifier, adapters) are roadmap items targeted for a future release; they are not present at v6.1.0 and their test counts are not yet defined.
 
 ---
 
@@ -892,17 +837,12 @@ gh api repos/szl-holdings/ouroboros/git/refs/tags/v6.1.0 --jq .object.sha
 git clone https://github.com/szl-holdings/ouroboros.git
 cd ouroboros && git checkout e9fc4b86eae18bb7401b14cb0e53900ba8e47ad8
 npm install
-npm test --workspaces --if-present
-# Expected: 925 tests passing
-
-# Run Python tests
-cd packages/ouroboros-py
-python -m pytest -q
-# Expected: 447 tests passing
-
-# Combined (from repo root)
-bash scripts/test_all.sh
-# Expected: 1,372 total, 0 failures
+npx vitest run
+# Expected: 150 declared tests in the @szl-holdings/ouroboros package.
+# Note: the v6.1.0 published tree contains a duplicate src/ layout that
+# suppresses test discovery for some files. The canonical source set is
+# packages/ouroboros/src/. A tracked layout-fix PR consolidates the tree
+# so all 150 tests run from a single Vitest invocation.
 ```
 
 **Governance posture at v3 release:**

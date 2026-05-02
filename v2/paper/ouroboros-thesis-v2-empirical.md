@@ -5,7 +5,7 @@ author:
   - name: Stephen P. Lutar Jr.
     affiliation: SZL Holdings
     email: stephenlutar2@gmail.com
-    orcid: 0009-0000-0000-0000    # TODO: register ORCID before submission
+    orcid: 0009-0001-0110-4173
 date: 2026
 classification: cs.SE (primary), cs.AI (secondary)
 keywords: adaptive computation, recursive systems, AI governance, agent runtimes, decision receipts, auditable AI, loop budget, convergence traces
@@ -15,10 +15,12 @@ reproducibility:
   thesis_repo: https://github.com/szl-holdings/ouroboros-thesis
   thesis_commit: 69a5416        # thesis main @ 2026-04-30T20:22:25Z
   platform_commit: fe3217a      # szl-holdings-platform master @ 2026-04-30T19:16:43Z
-  tests_passing: 142
+  tests_declared: 150     # corrected: original v2 reported 142; declared count at e9fc4b8 is 150
   harness_license: MIT
   runtime_license: proprietary
 ---
+
+> **Correction notice (May 1 2026):** This GitHub copy of the paper has been edited for accuracy. Three changes were made and none affect the load-bearing scientific claims. (1) The test count is corrected from 142 to 150: the Vitest suite at release commit `e9fc4b8` declares 150 tests, not 142. The original number was a counting error. The published tree at this SHA contains a duplicate `src/` layout that suppresses discovery for several files, and a tracked layout-fix consolidates the tree. (2) The 2026-04-30 NYSTEC engagement is reframed from “government-readiness audit” to “Empire APEX counseling session”, which is what it was. (3) The 72/68/65 readiness scorecards for A11oy, Sentra, and Amaru are now correctly described as founder-completed self-assessments prepared as input to that counseling session, not as third-party audit results. The Zenodo deposit at [DOI 10.5281/zenodo.19934129](https://doi.org/10.5281/zenodo.19934129) has not yet been corrected; an erratum will be filed with explicit owner approval.
 
 > *"In the beginning, the end was already coiled inside me, an ouroboros chewing through its own body until it reached my heart. My life feels like a torn codex — pages ripped out, ink smeared like blood across the margins — yet the story still refuses to die. Worlds don't end quietly; they end in quakes and fire, and so did I. When everything in me finally collapsed, I understood: this wasn't my ruin, it was a ritual. I was never meant to stay unbroken. I was always meant to burn, to fall, to crawl out of my own wreckage — and dare to call that survival beautiful."*
 >
@@ -28,7 +30,7 @@ reproducibility:
 
 The Ouroboros Thesis [1] argued that bounded loops with measurable convergence should be elevated from implementation detail to a first-class runtime primitive for AI systems. That paper was a position and systems-design preprint and made no empirical claims.
 
-This paper is the empirical companion. We report (a) a shipped reference implementation of the four v1 primitives as a TypeScript runtime, `@szl-holdings/ouroboros` (142/142 tests, deterministic replay, opt-in adaptive depth with bit-identical invariant); (b) three production case studies on the same kernel — A11oy (agent orchestration), Sentra (recursive threat modeling), Amaru (convergent data synchronization) — with shared trace persistence via `aef-evidence-ledger`; (c) closure of the five-item experimental agenda in v1 §9, including a new loop-budget Pareto frontier and a pre-registered, small-N crossover study on whether convergence traces change human audit behavior; and (d) a direct mapping of the runtime to NIST AI RMF MEASURE/MANAGE, EU AI Act Article 12 record-keeping, and the 2026-04-30 NYSTEC government-readiness audit (A11oy 72/100, Sentra 68/100, Amaru 65/100).
+This paper is the empirical companion. We report (a) a shipped reference implementation of the four v1 primitives as a TypeScript runtime, `@szl-holdings/ouroboros` (150 declared Vitest tests at the release commit, deterministic replay, opt-in adaptive depth with bit-identical invariant); (b) three case studies on the same kernel — A11oy (agent orchestration), Sentra (recursive threat modeling), Amaru (convergent data synchronization) — with shared trace persistence via `aef-evidence-ledger`; (c) closure of the five-item experimental agenda in v1 §9, including a new loop-budget Pareto frontier and a pre-registered, small-N crossover study on whether convergence traces change human audit behavior; and (d) a direct mapping of the runtime to NIST AI RMF MEASURE/MANAGE and EU AI Act Article 12 record-keeping, alongside founder-completed self-assessment scorecards (A11oy 72/100, Sentra 68/100, Amaru 65/100) prepared as input to a NYSTEC Empire APEX counseling session on 2026-04-30. The 72/68/65 figures are self-scored, not external audit results.
 
 The paper tightens rather than widens v1. Cross-system distillation (v1 §8) is deliberately held as a hypothesis, not promoted. Adaptive depth is a heuristic, not a learned policy. Three of the five experiments reproduce on internal workloads; the open-source harness (MIT) supplies synthetic equivalents. We commit to publishing a null result for the human-study arm if that is what the data supports.
 
@@ -56,7 +58,7 @@ Replacing v1 would rewrite the record. Issuing a companion paper preserves v1 as
 
 ### 1.3 Contributions
 
-**C1.** We provide the reference implementation of the four v1 primitives as `@szl-holdings/ouroboros` — 142 passing tests across proof-route resolution, risk-tier escalation, almanac cycle advancement, runtime contract invariants, permission matrix, sandbox policy, agent registry validation, and nine pure-function tests on the EntropyDepthAllocator's Δ-witness, severity entropy, rolling soft-fail rate, and verdict precedence rules.
+**C1.** We provide the reference implementation of the four v1 primitives as `@szl-holdings/ouroboros` — 150 declared Vitest tests at the release commit (`e9fc4b8`) covering proof-route resolution, risk-tier escalation, almanac cycle advancement, runtime contract invariants, permission matrix, sandbox policy, agent registry validation, and pure-function tests on the EntropyDepthAllocator's Δ-witness, severity entropy, rolling soft-fail rate, and verdict precedence rules. (The original v2 release reported 142 tests; the actual declared count at that SHA is 150. The number is corrected here.)
 
 **C2.** We extend v1 with a v6 operational contract (`a11oy-ultimate-replit-payload.v6.json`) layered on top of the kernel: 16 shared runtime services, 10 halt conditions (three new: `primary_source_required_but_unavailable`, `permission_denied`, `sandbox_policy_violation`), 11-rule extended task routing, tool permission matrix with deny-by-default and R3-mutating-needs-approval / R4-read-only-until-approved semantics, three execution classes, and a required-field schema for agent registry entries.
 
@@ -64,7 +66,7 @@ Replacing v1 would rewrite the record. Issuing a companion paper preserves v1 as
 
 **C4.** We close out v1 §9.1–9.5 with reproducible measurements. For §9.4 (trace-aided audit review) and §9.5 (loop-budget frontier), we run new studies and publish the harness.
 
-**C5.** We present governance as evidence rather than advocacy, with a direct mapping to NIST AI RMF MEASURE/MANAGE, EU AI Act Article 12 (record-keeping for high-risk AI systems), and the NYSTEC pre-briefing scorecards produced on 2026-04-30 for A11oy, Sentra, and Amaru.
+**C5.** We present governance as evidence rather than advocacy, with a direct mapping to NIST AI RMF MEASURE/MANAGE, EU AI Act Article 12 (record-keeping for high-risk AI systems), and founder-completed self-assessment scorecards prepared for the NYSTEC Empire APEX counseling session on 2026-04-30 (A11oy, Sentra, Amaru).
 
 ### 1.4 What this paper deliberately does not claim
 
@@ -214,14 +216,14 @@ v1 did not describe this layer because v1 was scoped to the kernel. Including it
 
 ### 3.6 Test suite
 
-The runtime repository ships 142 tests:
+At release commit `e9fc4b8` the runtime repository declares 150 Vitest tests across the loop kernel, depth allocator, consistency check, risk tier, and types. The categories are:
 
-- 28 pinning tests for every cardinal fact in `docs/audit/szl-government-readiness.md`.
-- 21 runtime-contract tests: proof-route resolver (PRF_SYSTEM_CLAIMS, PRF_SECURITY_ACTIONS, PRF_DATA_SYNC), risk-tier escalation gate, almanac cycle advancer.
-- 9 EntropyDepthAllocator tests: Δ-witness (normalized Hamming), severity entropy, rolling soft-fail rate, all four verdict branches (`continue` / `early_exit_converged` / `early_exit_entropy` / `extend`), the convergence-beats-entropy precedence rule, and bit-identical determinism against pre-allocator replay hash.
-- 84 v6 contract tests: services, halts, routing, permissions (deny-by-default pinned), sandbox class wire-format, agent-registry validation.
+- Pinning tests for every cardinal fact in `docs/audit/szl-government-readiness.md`.
+- Runtime-contract tests: proof-route resolver (PRF_SYSTEM_CLAIMS, PRF_SECURITY_ACTIONS, PRF_DATA_SYNC), risk-tier escalation gate, almanac cycle advancer.
+- EntropyDepthAllocator tests: Δ-witness (normalized Hamming), severity entropy, rolling soft-fail rate, all four verdict branches (`continue` / `early_exit_converged` / `early_exit_entropy` / `extend`), the convergence-beats-entropy precedence rule, and bit-identical determinism against pre-allocator replay hash.
+- v6 contract tests: services, halts, routing, permissions (deny-by-default pinned), sandbox class wire-format, agent-registry validation.
 
-All tests pass on `pnpm exec vitest run --no-coverage` against runtime commit `e9fc4b8` (2026-04-30T20:22:26Z).
+Note: the published tree at this SHA contains a duplicate `src/` layout that suppresses Vitest discovery for several files. A tracked layout-fix consolidates the source set under `packages/ouroboros/src/` so all 150 declared tests run from a single `npx vitest run` invocation. The original v2 release reported 142 tests at this SHA; the correct declared count is 150 and this paper now uses that number.
 
 ### 3.7 Falsification ledger — what would refute this paper
 
@@ -236,7 +238,7 @@ A paper that does not say what would refute it has not earned the right to be be
 | F5 | The trace audit study (§5.4) shows trace-arm error-detection rate ≥ baseline + 20% (H3). | Pre-registered analysis fails to detect that effect at the lower 95% bootstrap CI bound. *We commit to publishing the null.* |
 | F6 | Loop-budget frontier (§5.5) shows adaptive budgets matching high fixed-depth quality at ≤ 70% average step cost. | The Pareto frontier shows fixed-depth dominating adaptive at every quality threshold > 0.8. |
 | F7 | Three production runtimes use one kernel without runtime-specific forks. | Any A11oy, Sentra, or Amaru deployment found loading a kernel build distinct from `@szl-holdings/ouroboros` at the documented commit. |
-| F8 | Trace is a deliverable under regulated procurement (§6). | NYSTEC, FedRAMP, or comparable reviewer rejects a trace artifact as insufficient under EU AI Act Art. 12 record-keeping or NIST AI RMF MEASURE. |
+| F8 | Trace is a deliverable under regulated procurement (§6). | A FedRAMP, EU AI Act notified body, or comparable third-party reviewer rejects a trace artifact as insufficient under EU AI Act Art. 12 record-keeping or NIST AI RMF MEASURE. |
 | F9 | Cross-system distillation is not claimed in this paper. | Any place in this paper outside §8 "Discussion" that asserts distillation as established. (We treat finding such a place as our error, not a claim defense.) |
 
 All falsifiers above can be checked by a third party with access to the public harness (`experiments/`) and one of: a published replication trace, a regulated-procurement audit report, or the runtime repository itself. Falsifiers F5 and F6 are the load-bearing empirical claims this paper makes.
@@ -376,15 +378,17 @@ Figure 4: Loop-budget Pareto frontier per workload
 
 Article 12 requires automatic recording of events over the lifetime of a high-risk AI system sufficient to trace operation. The `OuroborosTrace` schema satisfies the record-keeping requirement directly: every run produces an indexed, queryable row set in `aef-evidence-ledger` with policy decisions, redactions, and timings.
 
-### 6.3 NYSTEC pre-briefing (2026-04-30)
+### 6.3 NYSTEC Empire APEX counseling session (2026-04-30)
 
-Per `docs/audit/szl-government-readiness.md`:
+NYSTEC administers the Empire APEX Accelerator counseling program for New York State. The 2026-04-30 engagement was a counseling session, not an audit. The scorecards below were produced by the founder using the Empire APEX readiness checklist as a self-assessment instrument prior to the session; they are not third-party audit findings.
+
+Per `docs/audit/szl-government-readiness.md` (founder self-assessment):
 
 - A11oy: 72/100 (gaps: FedRAMP disclosure, CMMC/NIST 800-171, bias methodology, US-only residency, 72-hr IR).
 - Sentra: 68/100 (gaps: SOC 2 Type II, IR runbook, threat-feed catalog, pen-testing).
 - Amaru: 65/100 (gaps: data classification, retention/deletion, COTS-ERP integration, PIA).
 
-All gaps are documented and scheduled; none require architectural rework.
+All gaps are documented and scheduled; none require architectural rework. A formal third-party audit has not been performed.
 
 ### 6.4 GSAR 552.239-7001
 
@@ -445,7 +449,7 @@ Future work: learned depth policies; open-source harness stabilization; cross-sy
 
 **Thesis + harness.** `szl-holdings/ouroboros-thesis` @ commit `69a5416` (2026-04-30T20:22:25Z). The `experiments/` harness is MIT-licensed and version-tagged against this commit.
 
-**Test reproducibility.** `pnpm exec vitest run --no-coverage` against the runtime commit above. 142 tests, 0 failing. A CI workflow (`ci/tests.yml`) pins this invariant on every pushed commit.
+**Test reproducibility.** `npx vitest run` against the runtime commit above. 150 declared Vitest tests in the `@szl-holdings/ouroboros` package; the published tree at this SHA contains a duplicate `src/` layout that suppresses discovery for some files, and a tracked layout-fix consolidates the tree so all 150 tests run from a single Vitest invocation. A CI workflow (`ci/tests.yml`) pins this invariant on every pushed commit.
 
 **Trace replay invariant.** With `loop_policy.adaptive_depth.enabled = false`, any two replays of the same input produce byte-identical `LoopTrace.steps`. Tested as `dresden-venus-invariant` in `runtime-contract.test.ts`.
 
@@ -457,7 +461,7 @@ Future work: learned depth policies; open-source harness stabilization; cross-sy
 
 ## Acknowledgments
 
-This work was conducted independently by SZL Holdings. The runtime code is proprietary; the experiments harness and trace schema are open-source under MIT. The NYSTEC government-readiness audit was performed in preparation for the Empire APEX Accelerator briefing on 2026-04-30.
+This work was conducted independently by SZL Holdings. The runtime code is proprietary; the experiments harness and trace schema are open-source under MIT. The NYSTEC engagement on 2026-04-30 was an Empire APEX Accelerator counseling session, not an external audit; the readiness scorecards referenced in §6.3 are founder-completed self-assessments prepared for that session.
 
 The author thanks the reviewers and early readers of the v1 preprint for their caution — which this paper has attempted to honor rather than ignore. Any reviewer who participates in the §5.4 study and consents to be named will be acknowledged here by name in the final version; those who decline are acknowledged collectively. The author alone is responsible for errors, overclaims, and any instance where the paper fails to meet the falsification conditions in §3.7.
 
